@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RE:BRAND | وكالة التسويق الإبداعية</title>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#050505',
+                            dark: '#0a0a0a',
+                            card: '#121212',
+                            border: '#2a2a2a',
+                            accent: '#ff6a00',
+                            accentHover: '#e65f00'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; color: #e5e5e5; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ff6a00; }
+
+        /* Glass Header */
+        .glass-header {
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Marquee Animation for smaller screens if needed, though grid is preferred for professional look */
+        .img-container img {
+            transition: transform 0.4s ease;
+        }
+        .img-container:hover img {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-brand-accent selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 glass-header transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 lg:px-12 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#home" class="block shrink-0">
+                <img src="image_11.png" alt="RE:BRAND Logo" class="h-10 md:h-12 object-contain transition-transform hover:scale-105 duration-300">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm md:text-base font-bold tracking-wide">
+                <a href="#home" class="text-white hover:text-brand-accent transition-colors duration-300">الرئيسية</a>
+                <a href="#services" class="text-gray-300 hover:text-brand-accent transition-colors duration-300">خدماتنا</a>
+                <a href="#clients" class="text-gray-300 hover:text-brand-accent transition-colors duration-300">شركاء النجاح</a>
+                <a href="#contact" class="text-gray-300 hover:text-brand-accent transition-colors duration-300">تواصل معنا</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block shrink-0">
+                <a href="#contact" class="px-6 py-2.5 bg-brand-accent hover:bg-brand-accentHover text-white font-bold rounded-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(255,106,0,0.39)] hover:shadow-[0_6px_20px_rgba(255,106,0,0.23)] hover:-translate-y-0.5 inline-block">
+                    ابدأ مشروعك
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none hover:text-brand-accent transition-colors">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-dark border-b border-brand-border flex-col text-center shadow-2xl">
+            <a href="#home" class="block py-4 text-white hover:text-brand-accent border-b border-gray-800 font-bold">الرئيسية</a>
+            <a href="#services" class="block py-4 text-gray-300 hover:text-brand-accent border-b border-gray-800 font-bold">خدماتنا</a>
+            <a href="#clients" class="block py-4 text-gray-300 hover:text-brand-accent border-b border-gray-800 font-bold">شركاء النجاح</a>
+            <a href="#contact" class="block py-4 text-gray-300 hover:text-brand-accent font-bold">تواصل معنا</a>
+        </div>
+    </header>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-brand-bg opacity-90 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-bg/80 to-brand-bg z-10"></div>
+            <!-- Dynamic Background -->
+            <img src="image_12.png" alt="RE:BRAND Banner Background" class="w-full h-full object-cover object-center opacity-40 mix-blend-overlay">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-20 text-center flex flex-col items-center">
+            <!-- Animated Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-accent/30 bg-brand-accent/10 text-brand-accent text-sm md:text-base font-bold mb-8 animate-fade-in-up">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-accent"></span>
+                </span>
+                Creative Marketing Agency
+            </div>
+            
+            <!-- Headline -->
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-2xl max-w-4xl">
+                نصنع هويتك.. <br class="hidden md:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-500">لنبني نجاحك</span>
+            </h1>
+            
+            <!-- Subheadline -->
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-md">
+                نحن في RE:BRAND نقدم لك حلولاً تسويقية متكاملة ومبتكرة، نترجم أفكارك إلى واقع يراه جمهورك بوضوح لنضع علامتك التجارية في الصدارة.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <a href="#services" class="w-full sm:w-auto px-8 py-4 bg-brand-accent hover:bg-brand-accentHover text-white font-bold text-lg rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(255,106,0,0.4)] hover:shadow-[0_0_30px_rgba(255,106,0,0.6)] transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    اكتشف خدماتنا
+                    <i class="fas fa-arrow-left text-sm"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-gray-600 hover:border-white text-white font-bold text-lg rounded-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center">
+                    تواصل معنا الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-brand-bg relative z-20">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">خدماتنا <span class="text-brand-accent">الإبداعية</span></h2>
+                <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">باقة متكاملة من الخدمات التسويقية الاحترافية المصممة خصيصاً لنمو أعمالك وتفوقك على المنافسين.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="group bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 rounded-bl-full -z-10 group-hover:bg-brand-accent/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-dark/50 flex items-center justify-center mb-6 text-brand-accent border border-brand-border group-hover:bg-brand-accent group-hover:text-white transition-all duration-300 shadow-lg">
+                        <i class="fa-solid fa-hashtag text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">إدارة حسابات التواصل</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm font-medium">بناء استراتيجيات قوية، صناعة محتوى إبداعي، وإدارة كاملة لمنصاتك لزيادة التفاعل وبناء مجتمع حول علامتك.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 rounded-bl-full -z-10 group-hover:bg-brand-accent/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-dark/50 flex items-center justify-center mb-6 text-brand-accent border border-brand-border group-hover:bg-brand-accent group-hover:text-white transition-all duration-300 shadow-lg">
+                        <i class="fa-solid fa-pen-nib text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">تصميم الهوية التجارية</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm font-medium">تصميم شعارات مبتكرة وهوية بصرية متكاملة تعكس شخصية مشروعك وتترك انطباعاً احترافياً لا يُنسى.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 rounded-bl-full -z-10 group-hover:bg-brand-accent/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-dark/50 flex items-center justify-center mb-6 text-brand-accent border border-brand-border group-hover:bg-brand-accent group-hover:text-white transition-all duration-300 shadow-lg">
+                        <i class="fa-solid fa-video text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">الإنتاج الفني</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm font-medium">جلسات تصوير فوتوغرافي عالية الجودة وإنتاج فيديوهات ترويجية تبرز جمال وقيمة منتجاتك وخدماتك.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 rounded-bl-full -z-10 group-hover:bg-brand-accent/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-dark/50 flex items-center justify-center mb-6 text-brand-accent border border-brand-border group-hover:bg-brand-accent group-hover:text-white transition-all duration-300 shadow-lg">
+                        <i class="fa-solid fa-bullseye text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">الحملات الإعلانية</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm font-medium">تخطيط وإطلاق حملات ممولة موجهة بدقة للجمهور المستهدف لتحقيق أعلى عائد على الاستثمار والمبيعات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="py-24 bg-brand-dark relative border-t border-brand-border">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">شركاء <span class="text-brand-accent">النجاح</span></h2>
+                <div class="w-24 h-1.5 bg-brand-accent mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">نفخر بالثقة التي منحونا إياها، ونسعد دائماً بكوننا جزءاً أساسياً من قصة نجاح هذه العلامات التجارية المتميزة.</p>
+            </div>
+
+            <!-- Highly Professional Logo Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                <!-- Client 1 -->
+                <div class="img-container bg-white rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 2 -->
+                <div class="img-container bg-white rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_2.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 3 -->
+                <div class="img-container bg-white rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_3.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 4 -->
+                <div class="img-container bg-white rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_4.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 5 -->
+                <div class="img-container bg-white rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_5.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 6 -->
+                <div class="img-container bg-[#3a1b22] md:bg-white rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <!-- Adjusted background specifically for image_6 if it has a dark bg, but white container usually handles it via object-contain. Using bg-white as default -->
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_6.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 7 -->
+                <div class="img-container bg-white rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_7.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 8 -->
+                <div class="img-container bg-black rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_8.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 9 -->
+                <div class="img-container bg-black rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_9.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+                <!-- Client 10 -->
+                <div class="img-container bg-black rounded-xl md:rounded-2xl p-4 md:p-6 flex items-center justify-center aspect-square shadow-lg border border-transparent hover:border-brand-accent/50 transition-all duration-300 hover:shadow-[0_10px_25px_rgba(255,106,0,0.15)] relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="image_10.png" alt="Client Partner" class="w-full h-full object-contain drop-shadow-sm relative z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brand-bg pt-20 pb-8 border-t border-brand-border relative overflow-hidden">
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="container mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+                <!-- Brand Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <a href="#home" class="inline-block">
+                        <img src="image_11.png" alt="RE:BRAND Logo" class="h-16 object-contain">
+                    </a>
+                    <p class="text-gray-400 text-base leading-relaxed max-w-sm font-medium mt-4">
+                        RE:BRAND هي وكالتك الإبداعية المتكاملة. نؤمن بقوة الأفكار وقدرتها على تحويل العلامات التجارية العادية إلى قصص نجاح استثنائية وملهمة.
+                    </p>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-4 pt-4">
+                        <a href="https://www.facebook.com/share/1DZhbXKLS9/?mibextid=wwXIfr" target="_blank" class="w-12 h-12 rounded-xl bg-brand-card flex items-center justify-center text-gray-400 hover:bg-[#1877F2] hover:text-white transition-all duration-300 border border-brand-border hover:border-[#1877F2] hover:-translate-y-1 shadow-lg">
+                            <i class="fa-brands fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/re.brand.eg?stkn=dzZwOXI2NG1jOHg1" target="_blank" class="w-12 h-12 rounded-xl bg-brand-card flex items-center justify-center text-gray-400 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white transition-all duration-300 border border-brand-border hover:border-transparent hover:-translate-y-1 shadow-lg">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/201002324999" target="_blank" class="w-12 h-12 rounded-xl bg-brand-card flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:text-white transition-all duration-300 border border-brand-border hover:border-[#25D366] hover:-translate-y-1 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fast Links -->
+                <div class="lg:col-span-3">
+                    <h4 class="text-white font-bold mb-8 text-xl flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+                        روابط سريعة
+                    </h4>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-gray-400 hover:text-brand-accent transition-colors font-medium flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> الرئيسية</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-accent transition-colors font-medium flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> خدماتنا</a></li>
+                        <li><a href="#clients" class="text-gray-400 hover:text-brand-accent transition-colors font-medium flex items-center gap-2"><i class="fa-solid fa-angle-left text-xs"></i> شركاء النجاح</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:col-span-4">
+                    <h4 class="text-white font-bold mb-8 text-xl flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
+                        تواصل معنا
+                    </h4>
+                    
+                    <div class="space-y-4">
+                        <!-- Phone -->
+                        <a href="tel:+201002324999" class="group flex items-center gap-4 text-gray-400 hover:text-brand-accent transition-all duration-300 p-4 rounded-xl bg-brand-card border border-brand-border hover:border-brand-accent/50 shadow-sm hover:shadow-md hover:-translate-y-1">
+                            <div class="w-12 h-12 rounded-full bg-brand-dark flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-colors shrink-0 shadow-inner">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500 mb-1 font-bold">اتصال / واتساب</span>
+                                <span dir="ltr" class="font-bold text-lg text-white group-hover:text-brand-accent transition-colors tracking-wider">+20 100 232 4999</span>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:info@rebrand.site" class="group flex items-center gap-4 text-gray-400 hover:text-brand-accent transition-all duration-300 p-4 rounded-xl bg-brand-card border border-brand-border hover:border-brand-accent/50 shadow-sm hover:shadow-md hover:-translate-y-1">
+                            <div class="w-12 h-12 rounded-full bg-brand-dark flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-colors shrink-0 shadow-inner">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-gray-500 mb-1 font-bold">البريد الإلكتروني</span>
+                                <span class="font-bold text-lg text-white group-hover:text-brand-accent transition-colors">info@rebrand.site</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 border-t border-brand-border text-center flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm font-bold">
+                    &copy; 2026 جميع الحقوق محفوظة لوكالة <span class="text-white">RE:BRAND</span>.
+                </p>
+                <p class="text-gray-500 text-sm font-medium">
+                    صُنع بشغف لنجاح علامتك التجارية.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            
+            if(menu.classList.contains('hidden')){
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
